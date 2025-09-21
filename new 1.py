@@ -156,8 +156,10 @@ def processCall():
     print("-" * 50)
 
 
-# =========================
-# Run Demo
-# =========================
 if __name__ == "__main__":
-    processCall()
+    while True:
+        processCall()
+        again = input("\nWould you like to simulate another call? (y/n): ").strip().lower()
+        if again != "y":
+            print("Exiting IVR simulation. Goodbye!")
+            break
